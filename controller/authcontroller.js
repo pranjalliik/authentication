@@ -27,7 +27,7 @@ const  signToken = id =>{
        const token = signToken(user._id)
        const cookieopt = {
         expires: new Date(
-          Date.now() + 1 * 24 *60 * 60 *1000), httpOnly:true,secure : true , sameSite : 'None' 
+          Date.now() + 1 * 24 *60 * 60 *1000), httpOnly : true , secure : true , sameSite : 'None' , domain : '.onrender.com'  ,  path : '/'
         }
    res.cookie('jwt',token,cookieopt)
   
@@ -61,7 +61,7 @@ const  signToken = id =>{
              const token = signToken(user._id);
                const cookieopt = {
                expires: new Date(
-               Date.now() + 1 * 24 *60 * 60 *1000),httpOnly:true,secure : true , sameSite : 'None'  
+               Date.now() + 1 * 24 *60 * 60 *1000) , httpOnly : true , secure : true , sameSite : 'None' , domain : '.onrender.com'  ,  path: '/'
       
                }
            res.cookie('jwt',token,cookieopt)
